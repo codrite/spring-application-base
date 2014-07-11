@@ -7,6 +7,9 @@
     <groupId>home.arnab.parent.spring</groupId>
     <artifactId>spring-application-base</artifactId>
     <version>1.0</version>
+    <modules>
+        <module>spring-config-free-app</module>
+    </modules>
     <packaging>pom</packaging>
 
     <properties>
