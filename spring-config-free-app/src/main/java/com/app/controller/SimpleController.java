@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Arrays;
 import java.util.List;
 
@@ -41,13 +43,17 @@ public class SimpleController {
         );
     }
 
+    @XmlRootElement
     public static class InternalUseOnly {
         private List<String> internal;
 
-        InternalUseOnly(List<String> internal) {
+        public InternalUseOnly() {}
+
+        public InternalUseOnly(List<String> internal) {
             this.internal = internal;
         }
 
+        @XmlAttribute
         public List<String> getInternal() {
             return internal;
         }

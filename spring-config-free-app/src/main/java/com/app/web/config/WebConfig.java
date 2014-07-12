@@ -22,7 +22,6 @@ import java.util.List;
 
 /**
  * Dispatcher Servlet Configuration
- *
  */
 
 @Configuration
